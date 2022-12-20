@@ -1,10 +1,10 @@
-% 
+% Descripton: Simulate the tracking_trajectory in different methods.
+% How to run: revise the tracking method in line 23 and run this main file.
+%%
 % state = [x, y, yaw, delta]
 % input = [v_des, delta_des]
 % ref = [x_ref, y_ref, yaw_ref, v_ref]
-% 
-% 
-% 
+%%
 
 clear variables;
 close all;
@@ -144,7 +144,7 @@ elseif control_mode == "mpc2"
 end
 fprintf("lattitude error: mean square = %f, max = %f", norm(lat_error_vec)/simulation_time, max(lat_error_vec));
 
-
+pause(3); % to wait the object generration
 %% movie plot
 
 sp_num = 18;
